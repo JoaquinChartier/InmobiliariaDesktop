@@ -42,6 +42,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -57,11 +69,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmGestionAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionAlquileres.Designer.cs">
+      <DependentUpon>FrmGestionAlquileres.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionInquilinos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGestionInquilinos.Designer.cs">
       <DependentUpon>FrmGestionInquilinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionLocalidades.Designer.cs">
+      <DependentUpon>FrmGestionLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionPropietarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionPropietarios.Designer.cs">
+      <DependentUpon>FrmGestionPropietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoInmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoInmuebles.Designer.cs">
+      <DependentUpon>FrmListadoInmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoInquilinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoInquilinos.Designer.cs">
+      <DependentUpon>FrmListadoInquilinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaLocalidad.Designer.cs">
+      <DependentUpon>FrmNuevaLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoAlquiler.Designer.cs">
+      <DependentUpon>FrmNuevoAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNuevoInmueble.cs">
       <SubType>Form</SubType>
@@ -75,6 +129,18 @@
     <Compile Include="FrmNuevoInquilino.Designer.cs">
       <DependentUpon>FrmNuevoInquilino.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionInmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionInmuebles.Designer.cs">
+      <DependentUpon>FrmGestionInmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoPropietario.Designer.cs">
+      <DependentUpon>FrmNuevoPropietario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +149,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FrmGestionAlquileres.resx">
+      <DependentUpon>FrmGestionAlquileres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionInquilinos.resx">
       <DependentUpon>FrmGestionInquilinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionLocalidades.resx">
+      <DependentUpon>FrmGestionLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionPropietarios.resx">
+      <DependentUpon>FrmGestionPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoInmuebles.resx">
+      <DependentUpon>FrmListadoInmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoInquilinos.resx">
+      <DependentUpon>FrmListadoInquilinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaLocalidad.resx">
+      <DependentUpon>FrmNuevaLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoAlquiler.resx">
+      <DependentUpon>FrmNuevoAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoInmueble.resx">
       <DependentUpon>FrmNuevoInmueble.cs</DependentUpon>
@@ -92,6 +180,14 @@
     <EmbeddedResource Include="FrmNuevoInquilino.resx">
       <DependentUpon>FrmNuevoInquilino.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionInmuebles.resx">
+      <DependentUpon>FrmGestionInmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoPropietario.resx">
+      <DependentUpon>FrmNuevoPropietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoInmuebles.rdlc" />
+    <EmbeddedResource Include="ListadoInquilinos.rdlc" />
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +201,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Datos.InmobiliariaDesktopContext.datasource" />
+    <None Include="Properties\DataSources\Datos.Models.Alquileres.datasource" />
+    <None Include="Properties\DataSources\Datos.Models.Inmueble.datasource" />
+    <None Include="Properties\DataSources\Datos.Models.Inquilino.datasource" />
+    <None Include="Properties\DataSources\Datos.Models.Localidad.datasource" />
+    <None Include="Properties\DataSources\Datos.Models.Propietario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +225,21 @@
       <Project>{A403BBCD-C2AD-4B9F-9C26-DAAD44D4B245}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

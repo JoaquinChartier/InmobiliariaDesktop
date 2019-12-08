@@ -13,11 +13,8 @@ namespace Datos.Models
         [Display(Name = "Propietario")]
         public String Nombre { get; set; }
         [Required(ErrorMessage = "El documento del propietario es requerido")]
-        [MinLength(7)]
-        [MaxLength(10)]
         public String DNI { get; set; }
         [Required(ErrorMessage = "El teléfono del propietario es requerido")]
-        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Ingrese un número válido")]
         [Display(Name = "Teléfono")]
         public String Telefono { get; set; }
         [Display(Name = "Cuenta bancaria")]

@@ -15,8 +15,6 @@ namespace Datos.Models
         public String Nombre { get; set; }
 
         [Required(ErrorMessage = "El documento del inquilino es requerido")]
-        [MinLength(7)]
-        [MaxLength(10)]
         public String DNI { get; set; }
 
         [Required(ErrorMessage = "El dato del inquilino es requerido")]
