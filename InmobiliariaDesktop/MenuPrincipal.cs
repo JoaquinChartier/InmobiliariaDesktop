@@ -93,6 +93,12 @@ namespace InmobiliariaDesktop
             FrmListadoInquilinos frmListadoInquilinos = new FrmListadoInquilinos();
             frmListadoInquilinos.ShowDialog();
         }
+
+        private void listadoDePropietariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoPropietarios frmListadoPropietarios = new FrmListadoPropietarios();
+            frmListadoPropietarios.ShowDialog();
+        }
     }
 
 }

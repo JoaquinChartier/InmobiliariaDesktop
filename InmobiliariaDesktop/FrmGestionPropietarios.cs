@@ -25,15 +25,15 @@ namespace InmobiliariaDesktop
         private void actualizarGrilla()
         {
             var propietariosAListar = from propietario in db.Propietarios
-                                    select new { Id = propietario.Id, Nombre = propietario.Nombre, DNI = propietario.DNI, Direccion = propietario.Direccion, Telefono = propietario.Telefono, cuentaBancaria = propietario.CuentaBancaria, Localidad = propietario.Localidad.Nombre };
+                                    select new { Id = propietario.Id, NombreApellido = propietario.Nombre, DNI = propietario.DNI, Direccion = propietario.Direccion, Telefono = propietario.Telefono, CBU = propietario.CuentaBancaria, Localidad = propietario.Localidad.Nombre };
             grid.DataSource = propietariosAListar.ToList();
         }
 
         private void actualizarGrilla(string textoABuscar)
         {
             var propietariosAListar = from propietario in db.Propietarios
-                                      select new { Id = propietario.Id, Nombre = propietario.Nombre, DNI = propietario.DNI, Direccion = propietario.Direccion, Telefono = propietario.Telefono, cuentaBancaria = propietario.CuentaBancaria, Localidad = propietario.Localidad.Nombre };
-            grid.DataSource = propietariosAListar.Where(p => p.Nombre.Contains(textoABuscar)).ToList();
+                                      select new { Id = propietario.Id, NombreApellido = propietario.Nombre, DNI = propietario.DNI, Direccion = propietario.Direccion, Telefono = propietario.Telefono, CBU = propietario.CuentaBancaria, Localidad = propietario.Localidad.Nombre };
+            grid.DataSource = propietariosAListar.Where(p => p.NombreApellido.Contains(textoABuscar)).ToList();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

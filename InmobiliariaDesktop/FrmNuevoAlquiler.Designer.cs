@@ -30,17 +30,17 @@
         {
             this.lblInquilino = new System.Windows.Forms.Label();
             this.lblInmueble = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.cboInquilino = new System.Windows.Forms.ComboBox();
+            this.cboInmueble = new System.Windows.Forms.ComboBox();
+            this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInquilino
@@ -61,12 +61,12 @@
             this.lblInmueble.TabIndex = 1;
             this.lblInmueble.Text = "Inmueble: ";
             // 
-            // dateTimePicker1
+            // dtpDesde
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(161, 83);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpDesde.Location = new System.Drawing.Point(161, 83);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(200, 22);
+            this.dtpDesde.TabIndex = 2;
             // 
             // label1
             // 
@@ -86,35 +86,40 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Hasta: ";
             // 
-            // dateTimePicker2
+            // dtpHasta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(161, 111);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 5;
+            this.dtpHasta.Location = new System.Drawing.Point(161, 111);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 22);
+            this.dtpHasta.TabIndex = 5;
             // 
-            // comboBox1
+            // cboInquilino
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(162, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 24);
-            this.comboBox1.TabIndex = 6;
+            this.cboInquilino.FormattingEnabled = true;
+            this.cboInquilino.Location = new System.Drawing.Point(162, 26);
+            this.cboInquilino.Name = "cboInquilino";
+            this.cboInquilino.Size = new System.Drawing.Size(199, 24);
+            this.cboInquilino.TabIndex = 6;
             // 
-            // comboBox2
+            // cboInmueble
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(162, 56);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 24);
-            this.comboBox2.TabIndex = 7;
+            this.cboInmueble.FormattingEnabled = true;
+            this.cboInmueble.Location = new System.Drawing.Point(162, 56);
+            this.cboInmueble.Name = "cboInmueble";
+            this.cboInmueble.Size = new System.Drawing.Size(199, 24);
+            this.cboInmueble.TabIndex = 7;
             // 
-            // numericUpDown1
+            // nudPrecio
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(162, 140);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(199, 22);
-            this.numericUpDown1.TabIndex = 8;
+            this.nudPrecio.Location = new System.Drawing.Point(162, 140);
+            this.nudPrecio.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudPrecio.Name = "nudPrecio";
+            this.nudPrecio.Size = new System.Drawing.Size(199, 22);
+            this.nudPrecio.TabIndex = 8;
             // 
             // label3
             // 
@@ -133,6 +138,7 @@
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -142,6 +148,7 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmNuevoAlquiler
             // 
@@ -151,19 +158,19 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.nudPrecio);
+            this.Controls.Add(this.cboInmueble);
+            this.Controls.Add(this.cboInquilino);
+            this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.lblInmueble);
             this.Controls.Add(this.lblInquilino);
             this.Name = "FrmNuevoAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar nuevo alquiler";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,13 +180,13 @@
 
         private System.Windows.Forms.Label lblInquilino;
         private System.Windows.Forms.Label lblInmueble;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.ComboBox cboInquilino;
+        private System.Windows.Forms.ComboBox cboInmueble;
+        private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;

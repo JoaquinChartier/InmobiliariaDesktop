@@ -95,11 +95,11 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(98, 15);
+            this.lblNombre.Location = new System.Drawing.Point(33, 15);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(66, 17);
+            this.lblNombre.Size = new System.Drawing.Size(131, 17);
             this.lblNombre.TabIndex = 13;
-            this.lblNombre.Text = "Nombre: ";
+            this.lblNombre.Text = "Nombre y Apellido: ";
             // 
             // btnCancelar
             // 
@@ -131,11 +131,11 @@
             // lblCuentaBancaria
             // 
             this.lblCuentaBancaria.AutoSize = true;
-            this.lblCuentaBancaria.Location = new System.Drawing.Point(44, 69);
+            this.lblCuentaBancaria.Location = new System.Drawing.Point(120, 69);
             this.lblCuentaBancaria.Name = "lblCuentaBancaria";
-            this.lblCuentaBancaria.Size = new System.Drawing.Size(120, 17);
+            this.lblCuentaBancaria.Size = new System.Drawing.Size(44, 17);
             this.lblCuentaBancaria.TabIndex = 21;
-            this.lblCuentaBancaria.Text = "Cuenta bancaria: ";
+            this.lblCuentaBancaria.Text = "CBU: ";
             // 
             // cboLocalidad
             // 

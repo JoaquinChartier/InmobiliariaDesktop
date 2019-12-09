@@ -64,11 +64,11 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(108, 33);
+            this.lblNombre.Location = new System.Drawing.Point(43, 33);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(66, 17);
+            this.lblNombre.Size = new System.Drawing.Size(131, 17);
             this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre: ";
+            this.lblNombre.Text = "Nombre y Apellido: ";
             // 
             // txtNombre
             // 
