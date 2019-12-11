@@ -40,7 +40,7 @@
             this.lblNombre.Location = new System.Drawing.Point(62, 36);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(66, 17);
-            this.lblNombre.TabIndex = 0;
+            this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre: ";
             // 
             // txtNombre
@@ -48,14 +48,14 @@
             this.txtNombre.Location = new System.Drawing.Point(125, 36);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 22);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 0;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(125, 74);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -65,7 +65,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(44, 74);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

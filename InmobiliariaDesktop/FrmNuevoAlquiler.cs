@@ -16,7 +16,7 @@ namespace InmobiliariaDesktop
     public partial class FrmNuevoAlquiler : Form
     {
         InmobiliariaDesktopContext db;
-        Alquileres alquiler;
+        Alquiler alquiler;
 
         public FrmNuevoAlquiler()
         {
@@ -24,7 +24,7 @@ namespace InmobiliariaDesktop
             db = new InmobiliariaDesktopContext();
             cargarComboInquilino(0);
             cargarComboInmueble(0);
-            alquiler = new Alquileres();
+            alquiler = new Alquiler();
         }
 
         public FrmNuevoAlquiler(InmobiliariaDesktopContext dbRecibido)
@@ -33,7 +33,7 @@ namespace InmobiliariaDesktop
             db = dbRecibido;
             cargarComboInquilino(0);
             cargarComboInmueble(0);
-            alquiler = new Alquileres();
+            alquiler = new Alquiler();
         }
 
         public FrmNuevoAlquiler(InmobiliariaDesktopContext dbRecibido, int idSeleccionado)
@@ -48,9 +48,20 @@ namespace InmobiliariaDesktop
 
         private void cargarElementoModificable()
         {
-            dtpDesde.Value = alquiler.Desde;
-            dtpHasta.Value = alquiler.Hasta;
-            nudPrecio.Value = CalculadorPrecio(alquiler.Desde,alquiler.Hasta,alquiler.Inmueble.PrecioAlquiler);
+            if (alquiler.PorMesBool == true)
+            {
+                rbDias.Checked = false;
+                rbMes.Checked = true;
+                nudDuracion.Value = alquiler.Duracion;
+            }
+            else
+            {
+                rbDias.Checked = true;
+                rbMes.Checked = false;
+                nudDuracion.Value = alquiler.Duracion;
+            }
+            
+            nudPrecio.Value = CalculadorPrecio(alquiler.PorMesBool,alquiler.Duracion,alquiler.Inmueble.PrecioAlquilerDia, alquiler.Inmueble.PrecioAlquilerMes);
         }
 
         private void cargarComboInquilino(int idInquilino)
@@ -73,9 +84,19 @@ namespace InmobiliariaDesktop
         {
             alquiler.InquilinoId = (int)cboInquilino.SelectedValue;
             alquiler.InmuebleId = (int)cboInmueble.SelectedValue;
-            alquiler.Desde = dtpDesde.Value;
-            alquiler.Hasta = dtpHasta.Value;
-            alquiler.Precio = CalculadorPrecio(alquiler.Desde,alquiler.Hasta, alquiler.Inmueble.PrecioAlquiler);
+            alquiler.Duracion = (int)nudDuracion.Value;
+
+            if (rbMes.Checked == true)
+            {
+                alquiler.PorMesBool = true;
+            }
+            else
+            {
+                alquiler.PorMesBool = false;
+            }
+
+            Inmueble inmueble = db.Inmuebles.Find((int)cboInmueble.SelectedValue);
+            alquiler.Precio = CalculadorPrecio(alquiler.PorMesBool,alquiler.Duracion, inmueble.PrecioAlquilerDia, inmueble.PrecioAlquilerMes);
 
             if (alquiler.Id > 0)
             {
@@ -94,11 +115,19 @@ namespace InmobiliariaDesktop
             this.Close();
         }
 
-        private int CalculadorPrecio(DateTime desde,DateTime hasta, int costo) {
+        private int CalculadorPrecio(bool rbElegido,int duracion, int costoDia, int costoMes) {
+            int precio;
+            if (rbElegido == true)
+            {
+                precio = costoMes * duracion;
+                return precio;
+            }
+            else
+            {
+                precio = costoDia * duracion;
+                return precio;
+            }
             
-            TimeSpan cantDias = hasta - desde;
-            var precio = cantDias.Days * costo;
-            return precio;
         }
     }
 }

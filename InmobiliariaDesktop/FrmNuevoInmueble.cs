@@ -42,7 +42,8 @@ namespace InmobiliariaDesktop
             txtNombre.Text = inmueble.Nombre;
             txtDireccion.Text = inmueble.Direccion;
             txtDescripcion.Text = inmueble.Descripcion;
-            nudPrecioAlquiler.Value = inmueble.PrecioAlquiler;
+            nudAlquilerMes.Value = inmueble.PrecioAlquilerMes;
+            nudAlquilerDia.Value = inmueble.PrecioAlquilerDia;
         }
 
         public FrmNuevoInmueble()
@@ -77,12 +78,12 @@ namespace InmobiliariaDesktop
         {
             inmueble.Nombre = txtNombre.Text;
             inmueble.PropietarioId = (int)cboPropietario.SelectedValue;
-            inmueble.PrecioAlquiler = (int)nudPrecioAlquiler.Value;
+            inmueble.PrecioAlquilerMes = (int)nudAlquilerMes.Value;
+            inmueble.PrecioAlquilerDia = (int)nudAlquilerDia.Value;
             inmueble.TipoDeInmueble= (TipoInmuebleEnum)cboTipoInmueble.SelectedIndex + 1;
             inmueble.Descripcion = txtDescripcion.Text;
             inmueble.Direccion = txtDireccion.Text;
-
-
+            
             if (inmueble.Id > 0)
             {
                 db.Entry(inmueble).State = EntityState.Modified;

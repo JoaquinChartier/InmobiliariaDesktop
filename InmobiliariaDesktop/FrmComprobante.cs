@@ -27,8 +27,11 @@ namespace InmobiliariaDesktop
         {
             var Alquiler = from alquiler in db.Alquileres
                            where alquiler.Id == this.seleccion
-                           select new { Id = alquiler.Id, Desde = alquiler.Desde, Hasta=alquiler.Hasta};
-                            
+                           select new { Id = alquiler.Id,
+                                        Inquilino = alquiler.Inquilino.Nombre,
+                                        Precio = alquiler.Precio,
+                                        Inmueble = alquiler.Inmueble.Nombre };
+
 
             this.AlquileresBindingSource.DataSource = Alquiler.ToList();
             this.reportViewerComprobante.RefreshReport();

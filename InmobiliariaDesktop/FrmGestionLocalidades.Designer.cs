@@ -90,6 +90,7 @@
             this.grid.Location = new System.Drawing.Point(13, 23);
             this.grid.Name = "grid";
             this.grid.RowTemplate.Height = 24;
+            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(775, 345);
             this.grid.TabIndex = 6;
             // 
@@ -105,6 +106,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.grid);
             this.Name = "FrmGestionLocalidades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar localidades";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);

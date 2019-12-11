@@ -41,12 +41,12 @@
             this.ingresarNuevoPropietarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDePropietariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarPropietariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarNuevaLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionarLocalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alquileresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarNuevaLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarLocalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,8 +58,8 @@
             this.inquilinosToolStripMenuItem,
             this.inmueblesToolStripMenuItem,
             this.propietariosToolStripMenuItem,
-            this.localidadesToolStripMenuItem,
             this.alquileresToolStripMenuItem,
+            this.localidadesToolStripMenuItem,
             this.sALIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,8 +74,8 @@
             this.listadoDeInquilinosToolStripMenuItem,
             this.gestionarInquilinosToolStripMenuItem});
             this.inquilinosToolStripMenuItem.Name = "inquilinosToolStripMenuItem";
-            this.inquilinosToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.inquilinosToolStripMenuItem.Text = "Inquilinos";
+            this.inquilinosToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.inquilinosToolStripMenuItem.Text = "Inquilinos ";
             // 
             // ingresarNuevoInquilinoToolStripMenuItem
             // 
@@ -136,8 +136,8 @@
             this.listadoDePropietariosToolStripMenuItem,
             this.gestionarPropietariosToolStripMenuItem});
             this.propietariosToolStripMenuItem.Name = "propietariosToolStripMenuItem";
-            this.propietariosToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.propietariosToolStripMenuItem.Text = "Propietarios";
+            this.propietariosToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.propietariosToolStripMenuItem.Text = "Propietarios ";
             // 
             // ingresarNuevoPropietarioToolStripMenuItem
             // 
@@ -160,37 +160,14 @@
             this.gestionarPropietariosToolStripMenuItem.Text = "Gestionar propietarios";
             this.gestionarPropietariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarPropietariosToolStripMenuItem_Click);
             // 
-            // localidadesToolStripMenuItem
-            // 
-            this.localidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarNuevaLocalidadToolStripMenuItem,
-            this.gestionarLocalidadesToolStripMenuItem});
-            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
-            this.localidadesToolStripMenuItem.Text = "Localidades";
-            // 
-            // ingresarNuevaLocalidadToolStripMenuItem
-            // 
-            this.ingresarNuevaLocalidadToolStripMenuItem.Name = "ingresarNuevaLocalidadToolStripMenuItem";
-            this.ingresarNuevaLocalidadToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.ingresarNuevaLocalidadToolStripMenuItem.Text = "Ingresar nueva localidad";
-            this.ingresarNuevaLocalidadToolStripMenuItem.Click += new System.EventHandler(this.ingresarNuevaLocalidadToolStripMenuItem_Click);
-            // 
-            // gestionarLocalidadesToolStripMenuItem
-            // 
-            this.gestionarLocalidadesToolStripMenuItem.Name = "gestionarLocalidadesToolStripMenuItem";
-            this.gestionarLocalidadesToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.gestionarLocalidadesToolStripMenuItem.Text = "Gestionar localidades";
-            this.gestionarLocalidadesToolStripMenuItem.Click += new System.EventHandler(this.gestionarLocalidadesToolStripMenuItem_Click);
-            // 
             // alquileresToolStripMenuItem
             // 
             this.alquileresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.gestionarToolStripMenuItem});
             this.alquileresToolStripMenuItem.Name = "alquileresToolStripMenuItem";
-            this.alquileresToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.alquileresToolStripMenuItem.Text = "Alquileres";
+            this.alquileresToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.alquileresToolStripMenuItem.Text = "Alquileres ";
             // 
             // aToolStripMenuItem
             // 
@@ -205,6 +182,29 @@
             this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.gestionarToolStripMenuItem.Text = "Gestionar alquileres";
             this.gestionarToolStripMenuItem.Click += new System.EventHandler(this.gestionarToolStripMenuItem_Click);
+            // 
+            // localidadesToolStripMenuItem
+            // 
+            this.localidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarNuevaLocalidadToolStripMenuItem,
+            this.gestionarLocalidadesToolStripMenuItem});
+            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.localidadesToolStripMenuItem.Text = "Localidades ";
+            // 
+            // ingresarNuevaLocalidadToolStripMenuItem
+            // 
+            this.ingresarNuevaLocalidadToolStripMenuItem.Name = "ingresarNuevaLocalidadToolStripMenuItem";
+            this.ingresarNuevaLocalidadToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
+            this.ingresarNuevaLocalidadToolStripMenuItem.Text = "Ingresar nueva localidad";
+            this.ingresarNuevaLocalidadToolStripMenuItem.Click += new System.EventHandler(this.ingresarNuevaLocalidadToolStripMenuItem_Click);
+            // 
+            // gestionarLocalidadesToolStripMenuItem
+            // 
+            this.gestionarLocalidadesToolStripMenuItem.Name = "gestionarLocalidadesToolStripMenuItem";
+            this.gestionarLocalidadesToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
+            this.gestionarLocalidadesToolStripMenuItem.Text = "Gestionar localidades";
+            this.gestionarLocalidadesToolStripMenuItem.Click += new System.EventHandler(this.gestionarLocalidadesToolStripMenuItem_Click);
             // 
             // sALIRToolStripMenuItem
             // 
@@ -221,6 +221,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inmobiliaria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);

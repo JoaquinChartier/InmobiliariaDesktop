@@ -46,7 +46,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(99, 186);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -56,7 +56,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(180, 186);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -67,7 +67,7 @@
             this.lblNombre.Location = new System.Drawing.Point(43, 33);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(131, 17);
-            this.lblNombre.TabIndex = 2;
+            this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre y Apellido: ";
             // 
             // txtNombre
@@ -75,14 +75,14 @@
             this.txtNombre.Location = new System.Drawing.Point(180, 30);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 22);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 0;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(180, 143);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(170, 22);
-            this.txtCorreo.TabIndex = 5;
+            this.txtCorreo.TabIndex = 4;
             // 
             // lblCorreo
             // 
@@ -90,7 +90,7 @@
             this.lblCorreo.Location = new System.Drawing.Point(48, 143);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(132, 17);
-            this.lblCorreo.TabIndex = 4;
+            this.lblCorreo.TabIndex = 10;
             this.lblCorreo.Text = "Correo electrónico: ";
             // 
             // lblTelefono
@@ -99,7 +99,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(108, 115);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(72, 17);
-            this.lblTelefono.TabIndex = 6;
+            this.lblTelefono.TabIndex = 9;
             this.lblTelefono.Text = "Teléfono: ";
             // 
             // lblDNI
@@ -116,7 +116,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(180, 112);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(170, 22);
-            this.txtTelefono.TabIndex = 7;
+            this.txtTelefono.TabIndex = 3;
             // 
             // rbJubilado
             // 
@@ -124,7 +124,7 @@
             this.rbJubilado.Location = new System.Drawing.Point(180, 85);
             this.rbJubilado.Name = "rbJubilado";
             this.rbJubilado.Size = new System.Drawing.Size(98, 21);
-            this.rbJubilado.TabIndex = 10;
+            this.rbJubilado.TabIndex = 2;
             this.rbJubilado.TabStop = true;
             this.rbJubilado.Text = "Es jubilado";
             this.rbJubilado.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.txtDNI.Location = new System.Drawing.Point(180, 58);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(170, 22);
-            this.txtDNI.TabIndex = 9;
+            this.txtDNI.TabIndex = 1;
             // 
             // FrmNuevoInquilino
             // 

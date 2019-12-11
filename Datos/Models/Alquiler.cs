@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Datos.Models
 {
-    public class Alquileres
+    public class Alquiler
     {
         public int Id { get; set; }
 
@@ -17,8 +17,9 @@ namespace Datos.Models
         public int InmuebleId { get; set; }
         public virtual Inmueble Inmueble { get; set; }
 
-        public DateTime Desde { get; set; }
-        public DateTime Hasta { get; set; }
+        public int Duracion { get; set; }
+
+        public bool PorMesBool { get; set; }
 
         public int Precio { get; set; }
     }

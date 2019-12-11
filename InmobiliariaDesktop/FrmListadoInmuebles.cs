@@ -23,7 +23,7 @@ namespace InmobiliariaDesktop
         private void FrmListadoInmuebles_Load(object sender, EventArgs e)
         {
             var Inmuebles = from inmueble in db.Inmuebles
-                            select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble.ToString(), PrecioAlquiler = inmueble.PrecioAlquiler};
+                            select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble.ToString(), PrecioAlquilerMes = inmueble.PrecioAlquilerMes, PrecioAlquilerDia = inmueble.PrecioAlquilerDia };
 
             this.InmuebleBindingSource.DataSource = Inmuebles.ToList();
             this.reportViewerInmuebles.RefreshReport();

@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewerComprobante = new Microsoft.Reporting.WinForms.ReportViewer();
             this.AlquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewerComprobante = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.AlquileresBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // AlquileresBindingSource
+            // 
+            this.AlquileresBindingSource.DataSource = typeof(Datos.Models.Alquiler);
             // 
             // reportViewerComprobante
             // 
@@ -47,10 +51,6 @@
             this.reportViewerComprobante.ServerReport.BearerToken = null;
             this.reportViewerComprobante.Size = new System.Drawing.Size(800, 450);
             this.reportViewerComprobante.TabIndex = 0;
-            // 
-            // AlquileresBindingSource
-            // 
-            this.AlquileresBindingSource.DataSource = typeof(Datos.Models.Alquileres);
             // 
             // FrmComprobante
             // 

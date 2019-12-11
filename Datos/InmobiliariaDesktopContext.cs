@@ -15,7 +15,7 @@ namespace Datos
             Database.SetInitializer<InmobiliariaDesktopContext>(new MigrateDatabaseToLatestVersion<InmobiliariaDesktopContext, Configuration>());
         }
 
-        public DbSet<Models.Alquileres> Alquileres { get; set; }
+        public DbSet<Models.Alquiler> Alquileres { get; set; }
         public DbSet<Models.Inmueble> Inmuebles { get; set; }
         public DbSet<Models.Inquilino> Inquilinos { get; set; }
         public DbSet<Models.Localidad> Localidades { get; set; }

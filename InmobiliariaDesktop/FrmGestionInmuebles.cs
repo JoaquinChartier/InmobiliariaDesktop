@@ -25,14 +25,14 @@ namespace InmobiliariaDesktop
         private void actualizarGrilla()
         {
             var inmueblesAListar = from inmueble in db.Inmuebles
-                                    select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble, Direccion = inmueble.Direccion, PrecioAlquiler = inmueble.PrecioAlquiler, Descripcion = inmueble.Descripcion };
+                                    select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble, Direccion = inmueble.Direccion, PrecioAlquilerMes = inmueble.PrecioAlquilerMes, PrecioAlquilerDia = inmueble.PrecioAlquilerDia, Descripcion = inmueble.Descripcion };
             grid.DataSource = inmueblesAListar.ToList();
         }
 
         private void actualizarGrilla(string textoABuscar)
         {
             var inmueblesAListar = from inmueble in db.Inmuebles
-                                   select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble, Direccion = inmueble.Direccion, PrecioAlquiler = inmueble.PrecioAlquiler, Descripcion = inmueble.Descripcion };
+                                   select new { Id = inmueble.Id, Nombre = inmueble.Nombre, Propietario = inmueble.Propietario.Nombre, TipoDeInmueble = inmueble.TipoDeInmueble, Direccion = inmueble.Direccion, PrecioAlquilerMes = inmueble.PrecioAlquilerMes, PrecioAlquilerDia = inmueble.PrecioAlquilerDia, Descripcion = inmueble.Descripcion };
             grid.DataSource = inmueblesAListar.Where(p => p.Nombre.Contains(textoABuscar)).ToList();
         }
 

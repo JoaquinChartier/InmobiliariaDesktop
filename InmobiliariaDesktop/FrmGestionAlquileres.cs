@@ -25,14 +25,14 @@ namespace InmobiliariaDesktop
         private void actualizarGrilla()
         {
             var alquileresAListar = from alquiler in db.Alquileres
-                                    select new { Id = alquiler.Id, Desde = alquiler.Desde, Hasta = alquiler.Hasta, Inquilino= alquiler.Inquilino.Nombre, Inmueble = alquiler.Inmueble.Nombre, Precio = alquiler.Precio};
+                                    select new { Id = alquiler.Id, Duracion = alquiler.Duracion, PorMes = alquiler.PorMesBool, Inquilino= alquiler.Inquilino.Nombre, Inmueble = alquiler.Inmueble.Nombre, Precio = alquiler.Precio};
             grid.DataSource = alquileresAListar.ToList();
         }
 
         private void actualizarGrilla(string textoABuscar)
         {
             var alquileresAListar = from alquiler in db.Alquileres
-                                    select new { Id = alquiler.Id, Desde = alquiler.Desde, Hasta = alquiler.Hasta, Inquilino = alquiler.Inquilino.Nombre, Inmueble = alquiler.Inmueble.Nombre, Precio = alquiler.Precio };
+                                    select new { Id = alquiler.Id, Duracion = alquiler.Duracion, PorMes = alquiler.PorMesBool, Inquilino = alquiler.Inquilino.Nombre, Inmueble = alquiler.Inmueble.Nombre, Precio = alquiler.Precio };
             grid.DataSource = alquileresAListar.Where(p => p.Inquilino.Contains(textoABuscar)).ToList();
         }
 
@@ -55,7 +55,7 @@ namespace InmobiliariaDesktop
             DialogResult respuesta = MessageBox.Show(mensaje, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                Alquileres alquiler = db.Alquileres.Find(idSeleccionado);
+                Alquiler alquiler = db.Alquileres.Find(idSeleccionado);
                 db.Alquileres.Remove(alquiler);
                 db.SaveChanges();
                 //recargamos el listado de categorias
