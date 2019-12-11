@@ -48,7 +48,7 @@ namespace InmobiliariaDesktop
         {
             DataGridViewCellCollection celdasFilaActual = grid.CurrentRow.Cells;
             int idSeleccionado = (int)celdasFilaActual[0].Value;
-            FrmNuevoInmueble frmNuevoInmueble = new FrmNuevoInmueble(db, 0);
+            FrmNuevoInmueble frmNuevoInmueble = new FrmNuevoInmueble(db, idSeleccionado);
             frmNuevoInmueble.ShowDialog();
             //recargamos el listado de categorias
             actualizarGrilla();
