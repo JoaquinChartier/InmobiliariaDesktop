@@ -17,6 +17,7 @@ namespace InmobiliariaDesktop
     {
         InmobiliariaDesktopContext db;
         Alquiler alquiler;
+        Inmueble inmueble;
 
         public FrmNuevoAlquiler()
         {
@@ -128,6 +129,59 @@ namespace InmobiliariaDesktop
                 return precio;
             }
             
+        }
+
+        private void nudDuracion_ValueChanged(object sender, EventArgs e)
+        {
+                
+                bool Mes = true;
+                var Duracion = (int)nudDuracion.Value;
+
+                if (rbDias.Checked == true)
+                { Mes = false; }
+                else
+                { Mes = true; }
+            Inmueble inmueble = db.Inmuebles.Find((int)cboInmueble.SelectedValue);
+            nudPrecio.Value = CalculadorPrecio(Mes, Duracion, inmueble.PrecioAlquilerDia, inmueble.PrecioAlquilerMes);
+            
+        }
+
+        private void cboInmueble_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboInmueble.SelectedIndex > -1 &&
+                cboInmueble.SelectedValue.GetType() == typeof(Int32))
+            {
+                
+                nudDuracion.Enabled = true;
+            }
+        }
+
+        private void rbDias_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            bool Mes = true;
+            var Duracion = (int)nudDuracion.Value;
+
+            if (rbDias.Checked == true)
+            { Mes = false; }
+            else
+            { Mes = true; }
+            Inmueble inmueble = db.Inmuebles.Find((int)cboInmueble.SelectedValue);
+            nudPrecio.Value = CalculadorPrecio(Mes, Duracion, inmueble.PrecioAlquilerDia, inmueble.PrecioAlquilerMes);
+        }
+
+        private void rbMes_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            bool Mes = true;
+            var Duracion = (int)nudDuracion.Value;
+
+            if (rbDias.Checked == true)
+            { Mes = false; }
+            else
+            { Mes = true; }
+            Inmueble inmueble = db.Inmuebles.Find((int)cboInmueble.SelectedValue);
+            nudPrecio.Value = CalculadorPrecio(Mes, Duracion, inmueble.PrecioAlquilerDia, inmueble.PrecioAlquilerMes);
         }
     }
 }

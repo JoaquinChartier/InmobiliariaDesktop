@@ -86,9 +86,11 @@
             this.cboInmueble.Name = "cboInmueble";
             this.cboInmueble.Size = new System.Drawing.Size(199, 24);
             this.cboInmueble.TabIndex = 2;
+            this.cboInmueble.SelectedIndexChanged += new System.EventHandler(this.cboInmueble_SelectedIndexChanged);
             // 
             // nudPrecio
             // 
+            this.nudPrecio.Enabled = false;
             this.nudPrecio.Location = new System.Drawing.Point(162, 140);
             this.nudPrecio.Maximum = new decimal(new int[] {
             999999999,
@@ -130,6 +132,7 @@
             // 
             // nudDuracion
             // 
+            this.nudDuracion.Enabled = false;
             this.nudDuracion.Location = new System.Drawing.Point(162, 114);
             this.nudDuracion.Maximum = new decimal(new int[] {
             99999999,
@@ -139,6 +142,7 @@
             this.nudDuracion.Name = "nudDuracion";
             this.nudDuracion.Size = new System.Drawing.Size(199, 22);
             this.nudDuracion.TabIndex = 5;
+            this.nudDuracion.ValueChanged += new System.EventHandler(this.nudDuracion_ValueChanged);
             // 
             // rbMes
             // 
@@ -151,6 +155,7 @@
             this.rbMes.TabStop = true;
             this.rbMes.Text = "Por mes";
             this.rbMes.UseVisualStyleBackColor = true;
+            this.rbMes.CheckedChanged += new System.EventHandler(this.rbMes_CheckedChanged);
             // 
             // rbDias
             // 
@@ -162,6 +167,7 @@
             this.rbDias.TabStop = true;
             this.rbDias.Text = "Por dias";
             this.rbDias.UseVisualStyleBackColor = true;
+            this.rbDias.CheckedChanged += new System.EventHandler(this.rbDias_CheckedChanged);
             // 
             // FrmNuevoAlquiler
             // 
